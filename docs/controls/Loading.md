@@ -3,6 +3,9 @@ title: Loading XAML Control
 author: nmetulev
 description: The loading control is for showing an animation with some content when the user should wait in some tasks of the app.
 keywords: windows 10, uwp, windows community toolkit, uwp community toolkit, uwp toolkit, Loading, XAML Control , xaml
+dev_langs:
+  - csharp
+  - vb
 ---
 
 # Loading XAML Control 
@@ -69,7 +72,7 @@ LoadingControl.IsLoading = true
 
 ## Requirements
 
-| Device family | Universal, 10.0.15063.0 or higher |
+| Device family | Universal, 10.0.16299.0 or higher |
 | -- | -- |
 | Namespace | Microsoft.Toolkit.Uwp.UI.Controls |
 | NuGet package | [Microsoft.Toolkit.Uwp.UI.Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.UI.Controls/) |

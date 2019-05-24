@@ -4,11 +4,9 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Toolkit.Uwp.UI.ImageCache" />
   <TypeSignature Language="VB.NET" Value="Public Class ImageCache&#xA;Inherits CacheBase(Of BitmapImage)" />
   <TypeSignature Language="F#" Value="type ImageCache = class&#xA;    inherit CacheBase&lt;BitmapImage&gt;" />
-  <TypeSignature Language="C++ CLI" Value="public ref class ImageCache : Microsoft::Toolkit::Uwp::UI::CacheBase&lt;Windows::UI::Xaml::Media::Imaging::BitmapImage ^&gt;" />
-  <TypeSignature Language="C++ WINRT" Value="[Windows::Foundation::Metadata::WebHostHidden]&#xA;class ImageCache : Microsoft::Toolkit::Uwp::UI::CacheBase&lt;Windows::UI::Xaml::Media::Imaging::BitmapImage&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Toolkit.Uwp.UI</AssemblyName>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>5.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Toolkit.Uwp.UI.CacheBase&lt;Windows.UI.Xaml.Media.Imaging.BitmapImage&gt;</BaseTypeName>
@@ -29,13 +27,10 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Toolkit.Uwp.UI.ImageCache.#ctor" />
       <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; ImageCache();" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; ImageCache();" />
-      <MemberSignature Language="C++ WINRT" Value=" ImageCache();" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Toolkit.Uwp.UI</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -53,7 +48,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Toolkit.Uwp.UI</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Windows.UI.Xaml.Media.Imaging.BitmapImage&gt;</ReturnType>
@@ -81,7 +76,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Toolkit.Uwp.UI</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Windows.UI.Xaml.Media.Imaging.BitmapImage&gt;</ReturnType>
@@ -106,11 +101,10 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Toolkit.Uwp.UI.ImageCache.Instance" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Instance As ImageCache" />
       <MemberSignature Language="F#" Value="member this.Instance : Microsoft.Toolkit.Uwp.UI.ImageCache" Usage="Microsoft.Toolkit.Uwp.UI.ImageCache.Instance" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Toolkit::Uwp::UI::ImageCache ^ Instance { Microsoft::Toolkit::Uwp::UI::ImageCache ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Toolkit.Uwp.UI</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Toolkit.Uwp.UI.ImageCache</ReturnType>
@@ -132,7 +126,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Toolkit.Uwp.UI</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>

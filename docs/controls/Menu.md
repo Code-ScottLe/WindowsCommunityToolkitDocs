@@ -7,6 +7,8 @@ keywords: windows 10, uwp, windows community toolkit, uwp community toolkit, uwp
 
 # Menu Control
 
+> [!NOTE] This control will be removed in a future major release.
+
 The [Menu Control](https://docs.microsoft.com/dotnet/api/microsoft.toolkit.uwp.ui.controls.menu) defines a menu of choices for users to invoke, it is inheriting from `ItemsControl`. The default ItemsPanel for the menu control is `WrapPanel` and it only supports MenuItem as an item\children.
 
 The [Menu Control](https://docs.microsoft.com/dotnet/api/microsoft.toolkit.uwp.ui.controls.menu) positions it's items the way the WrapPanel does based on the selected orientation Virtical\Horizontal (Developers can change the control ItemsPanel). The Menu items must be of type MenuItem, each MenuItem can be opened using keyboard or pointer.
@@ -64,7 +66,7 @@ If the tooltip is allowed on the Menu control when clicking Alt a tooltip with t
 | InputGestureText | string | Sets the text describing an input gesture that will call the command tied to the specified item or to open the MenuItem FlyoutMenu. ex (Alt+F) |
 
 > [!NOTE]
-InputGestureText supports Ctrl, Alt or Shift.
+> InputGestureText supports Ctrl, Alt or Shift.
 
 ### MenuItem Properties
 
@@ -147,7 +149,7 @@ internal class NewProjectCommand : ICommand
 
 ## Requirements
 
-| Device family | Universal, 10.0.15063.0 or higher |
+| Device family | Universal, 10.0.16299.0 or higher |
 | -- | -- |
 | Namespace | Microsoft.Toolkit.Uwp.UI.Controls |
 | NuGet package | [Microsoft.Toolkit.Uwp.UI.Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.UI.Controls/) |

@@ -41,7 +41,7 @@ Text box with ValidationType=Email, validation occurs on TextChanged
 
 | Property | Type | Description |
 | -- | -- | -- |
-| IsValid | bool | Represents the custom mask that the user can create to add his own variable characters based on regex expression |
+| IsValid | bool | Indicates whether the entered text is valid |
 | Regex | string | Set the regular expression that will be used to validate the TextBox |
 | ValidationMode | [ValidationMode](https://docs.microsoft.com/dotnet/api/microsoft.toolkit.uwp.ui.extensions.textboxregex.validationmode) | Set validation mode. Normal, Forced or Dynamic |
 | ValidationType | [ValidationType](https://docs.microsoft.com/dotnet/api/microsoft.toolkit.uwp.ui.extensions.textboxregex.validationtype) | Set a built in predefined validation types Email, Decimal, Phone Number, Character or Number |
@@ -165,7 +165,7 @@ The following sample demonstrates how to add TextBoxRegex property.
 
 ## Requirements
 
-| Device family | Universal, 10.0.15063.0 or higher |
+| Device family | Universal, 10.0.16299.0 or higher |
 | --- | --- |
 | Namespace | Microsoft.Toolkit.Uwp.UI.Extensions |
 | NuGet package | [Microsoft.Toolkit.Uwp.UI](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.UI/) |

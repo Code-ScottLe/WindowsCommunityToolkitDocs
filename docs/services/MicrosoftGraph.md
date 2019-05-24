@@ -5,7 +5,7 @@ description: The MicrosoftGraph Service aim to easily logon to Microsoft Graph s
 keywords: windows 10, uwp, windows community toolkit, uwp community toolkit, uwp toolkit, MicrosoftGraph Service
 dev_langs:
   - csharp
-  - vb
+  - vb 
 ---
 
 # MicrosoftGraph Service
@@ -17,8 +17,8 @@ The **MicrosoftGraph** Service allows easy access to the Microsoft Graph in orde
 * Retrieve User events
 
 > [!NOTE]
-This API will not work on an XBOX UWP Application
- 
+> This API will not work on an XBOX UWP Application
+
 ## Get a Client Id
 
 To authenticate your app, you need to register your app with Azure AD, and provide some details about your app. 
@@ -61,7 +61,7 @@ When you register your app in the [Azure Management Portal](http://portal.azure.
    * **Read user calendars** to retrieve events.
 
 **Note:** Once register copy and save the Client ID for future use.
- 
+
 |Setting|Value|
 |----------|:-------------:|
 |Native application|Yes|
@@ -90,10 +90,12 @@ If you don't have one, you need to create an Office 365 Developer Site. There ar
 
 ```csharp
 // Initialize the service
-if (!MicrosoftGraphService.Instance.Initialize(ClientId.Text))
+var scopes = "Calendars.Read Mail.Read Mail.Send User.Read".Split(' ');
+if (!MicrosoftGraphService.Instance.Initialize(ClientId.Text, ServicesToInitialize.Message | ServicesToInitialize.UserProfile | ServicesToInitialize.Event, scopes))
 {
- return;
+    return;
 }
+
 // Login via Azure Active Directory 
 if (!await MicrosoftGraphService.Instance.LoginAsync())
 {
@@ -101,22 +103,31 @@ if (!await MicrosoftGraphService.Instance.LoginAsync())
 }
 
 // Create a instance of the service
-var msg = new MicrosoftGraphService(ClientId.Text);
+var msg = new MicrosoftGraphService(ClientId.Text, ServicesToInitialize.Message | ServicesToInitialize.UserProfile | ServicesToInitialize.Event, scopes);
 // Login via Azure Active Directory 
 if (!await msg.LoginAsync())
 {
  return;
 }
-
 ```
 ```vb
+
 ' Initialize the service
-If Not MicrosoftGraphService.Instance.Initialize(ClientId.Text) Then
+Dim scopes = "Calendars.Read Mail.Read Mail.Send User.Read".Split(" "c)
+
+If Not MicrosoftGraphService.Instance.Initialize(ClientId.Text, ServicesToInitialize.Message Or ServicesToInitialize.UserProfile Or ServicesToInitialize.[Event], scopes) Then
     Return
 End If
 
 ' Login via Azure Active Directory
 If Not Await MicrosoftGraphService.Instance.LoginAsync() Then
+    Return
+End If
+
+' Create a instance of the service
+Dim msg = New MicrosoftGraphService(ClientId.Text, ServicesToInitialize.Message Or ServicesToInitialize.UserProfile Or ServicesToInitialize.[Event], scopes)
+
+If Not Await msg.LoginAsync() Then
     Return
 End If
 ```
@@ -132,6 +143,19 @@ MicrosoftGraphService.Instance.SignInFailed += (sender, e) =>
 {
     // do something
 };
+```
+```vb
+' Register event handler to capture authentication state changes
+AddHandler MicrosoftGraphService.Instance.IsAuthenticatedChanged,
+    Sub(sender, e)
+        ' do something
+    End Sub
+
+' Register event handler to capture sign in exceptions
+AddHandler MicrosoftGraphService.Instance.SignInFailed,
+    Sub(sender, e)
+        ' do something
+    End Sub
 ```
 
 ### Get the connected user's info
@@ -230,7 +254,7 @@ if (messages == null)
 
 // Send a message
 string[] toRecipients = { "user1@contoso.com", "user2@contoso.com" };
-string subject = "This is the subject of my message;
+string subject = "This is the subject of my message";
 string content = "This is the content of my message";
 
 await MicrosoftGraphService.Instance.User.Message.SendEmailAsync(subject, content, BodyType.Text, toRecipients);
@@ -262,7 +286,7 @@ End If
 
 ' Send a message
 Dim toRecipients As String() = {"user1@contoso.com", "user2@contoso.com"}
-Dim subject As String = "This is the subject of my message;"
+Dim subject As String = "This is the subject of my message"
 Dim content As String = "This is the content of my message"
 Await MicrosoftGraphService.Instance.User.Message.SendEmailAsync(subject, content, BodyType.Text, toRecipients)
 
@@ -296,7 +320,7 @@ EventsList.ItemsSource = events;
 events = await MicrosoftGraphService.Instance.User.Event.NextPageEventsAsync();
 if (events == null)
 {
-	// no more events
+    // no more events
 }
 ```
 ```vb
@@ -329,7 +353,7 @@ End If
 
 ### Requirements
 
-| Device family | Universal, 10.0.15063.0 or higher |
+| Device family | Universal, 10.0.16299.0 or higher |
 | --- | --- |
 | Namespace | Microsoft.Toolkit.Services |
 | NuGet package | [Microsoft.Toolkit.Services](https://www.nuget.org/packages/Microsoft.Toolkit.Services/) |

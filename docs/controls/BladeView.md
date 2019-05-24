@@ -37,11 +37,11 @@ The [BladeView Control](https://docs.microsoft.com/dotnet/api/microsoft.toolkit.
 
 ### BladeView Properties
 
-| Property | Type | Description |
-| -- | -- | -- |
-| ActiveBlades | IList<[BladeItem](https://docs.microsoft.com/dotnet/api/microsoft.toolkit.uwp.ui.controls.bladeitem)> | Description |
-| AutoCollapseCountThreshold | int | Gets or sets a value indicating what the overflow amount should be to start auto collapsing blade items |
-| BladeMode | [BladeMode](https://docs.microsoft.com/dotnet/api/microsoft.toolkit.uwp.ui.controls.blademode) | Gets or sets a value indicating whether blade mode (ex: whether blades are full screen or not) |
+|          Property          |                                                 Type                                                  |                                               Description                                               |
+|----------------------------|-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
+|        ActiveBlades        | IList<[BladeItem](https://docs.microsoft.com/dotnet/api/microsoft.toolkit.uwp.ui.controls.bladeitem)> |                                               Description                                               |
+| AutoCollapseCountThreshold |                                                  int                                                  | Gets or sets a value indicating what the overflow amount should be to start auto collapsing blade items |
+|         BladeMode          |    [BladeMode](https://docs.microsoft.com/dotnet/api/microsoft.toolkit.uwp.ui.controls.blademode)     |     Gets or sets a value indicating whether blade mode (ex: whether blades are full screen or not)      |
 
 ### BladeItem Properties
 
@@ -50,9 +50,8 @@ The [BladeView Control](https://docs.microsoft.com/dotnet/api/microsoft.toolkit.
 | CloseButtonBackground | Brush | Gets or sets the background color of the default close button in the title bar |
 | CloseButtonForeground | Brush | Gets or sets the foreground color of the close button |
 | IsOpen | bool | Gets or sets a value indicating whether this blade is opened |
-| Title | string | Gets or sets the title to appear in the title bar |
+| Header | string | Gets or sets the content for the header |
 | TitleBarBackground | Brush | Gets or sets the background color of the title bar |
-| TitleBarForeground | Brush | Gets or sets the titlebar foreground color |
 | TitleBarVisibility | Visibility | Gets or sets the visibility of the title bar for this blade |
 
 ## Events
@@ -101,7 +100,7 @@ The [BladeView Control](https://docs.microsoft.com/dotnet/api/microsoft.toolkit.
 
 ## Requirements
 
-| Device family | Universal, 10.0.15063.0 or higher |
+| Device family | Universal, 10.0.16299.0 or higher |
 | -- | -- |
 | Namespace | Microsoft.Toolkit.Uwp.UI.Controls |
 | NuGet package | [Microsoft.Toolkit.Uwp.UI.Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.UI.Controls/) |

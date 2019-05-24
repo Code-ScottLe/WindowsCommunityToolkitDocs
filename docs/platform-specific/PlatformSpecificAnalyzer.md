@@ -36,7 +36,7 @@ Visual Basic
 
 ## Requirements
 
-| Device family | Universal, 10.0.15063.0 or higher   |
+| Device family | Universal, 10.0.16299.0 or higher   |
 | ---------------------------------------------------------------- | ----------------------------------- |
 | Namespace                                                        | Microsoft.Toolkit.Uwp.PlatformSpecificAnalyzer |
 | NuGet package | [Microsoft.Toolkit.Uwp.PlatformSpecificAnalyzer](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.PlatformSpecificAnalyzer/) |
@@ -49,4 +49,4 @@ Visual Basic
 
 <!-- Optional -->
 
-- [Platform Specific Differences Generator](https://docs.microsoft.com/dotnet/api/microsoft.toolkit.uwp.ui.platformspecificanalyzerdifferencesgen)
+- [Platform Specific Differences Generator](https://docs.microsoft.com/en-us/windows/communitytoolkit/platform-specific/platformspecificdifferencesgenerator)

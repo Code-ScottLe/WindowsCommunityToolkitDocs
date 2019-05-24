@@ -4,12 +4,9 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Toolkit.Extensions.StringExtensions" />
   <TypeSignature Language="VB.NET" Value="Public Module StringExtensions" />
   <TypeSignature Language="F#" Value="type StringExtensions = class" />
-  <TypeSignature Language="C++ CLI" Value="public ref class StringExtensions abstract sealed" />
-  <TypeSignature Language="C++ CX" Value="public ref class StringExtensions abstract sealed" />
-  <TypeSignature Language="C++ WINRT" Value="class StringExtensions abstract sealed" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Toolkit</AssemblyName>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>5.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -17,23 +14,55 @@
   <Interfaces />
   <Docs>
     <summary>
-            All common string extensions should go here
+            Helpers for working with strings.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="AsFormat">
+      <MemberSignature Language="C#" Value="public static string AsFormat (this string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string AsFormat(string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Toolkit.Extensions.StringExtensions.AsFormat(System.String,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AsFormat (format As String, ParamArray args As Object()) As String" />
+      <MemberSignature Language="F#" Value="static member AsFormat : string * obj[] -&gt; string" Usage="Microsoft.Toolkit.Extensions.StringExtensions.AsFormat (format, args)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Toolkit</AssemblyName>
+        <AssemblyVersion>5.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" RefType="this" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="format">The format of the string being linked.</param>
+        <param name="args">The object which will receive the linked String.</param>
+        <summary>
+            Provide better linking for resourced strings.
+            </summary>
+        <returns>Truncated string.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="DecodeHtml">
       <MemberSignature Language="C#" Value="public static string DecodeHtml (this string htmlText);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string DecodeHtml(string htmlText) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Toolkit.Extensions.StringExtensions.DecodeHtml(System.String)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DecodeHtml (htmlText As String) As String" />
       <MemberSignature Language="F#" Value="static member DecodeHtml : string -&gt; string" Usage="Microsoft.Toolkit.Extensions.StringExtensions.DecodeHtml htmlText" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::String ^ DecodeHtml(System::String ^ htmlText);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Platform::String ^ DecodeHtml(Platform::String ^ htmlText);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Toolkit</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -44,9 +73,9 @@
       <Docs>
         <param name="htmlText">HTML string.</param>
         <summary>
-            Decode HTML string.
+            Returns a string with HTML comments, scripts, styles, and tags removed.
             </summary>
-        <returns>Returns decoded HTML string.</returns>
+        <returns>Decoded HTML string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -56,12 +85,10 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Toolkit.Extensions.StringExtensions.FixHtml(System.String)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function FixHtml (html As String) As String" />
       <MemberSignature Language="F#" Value="static member FixHtml : string -&gt; string" Usage="Microsoft.Toolkit.Extensions.StringExtensions.FixHtml html" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::String ^ FixHtml(System::String ^ html);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Platform::String ^ FixHtml(Platform::String ^ html);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Toolkit</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -70,11 +97,11 @@
         <Parameter Name="html" Type="System.String" RefType="this" />
       </Parameters>
       <Docs>
-        <param name="html">HTML string to fix</param>
+        <param name="html">HTML string to fix.</param>
         <summary>
-            Applies regular expressions to string of HTML to remove comments, scripts, styles.
+            Returns a string with HTML comments, scripts, and styles removed.
             </summary>
-        <returns>Fixed HTML string</returns>
+        <returns>Fixed HTML string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -84,12 +111,10 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Toolkit.Extensions.StringExtensions.IsCharacterString(System.String)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function IsCharacterString (str As String) As Boolean" />
       <MemberSignature Language="F#" Value="static member IsCharacterString : string -&gt; bool" Usage="Microsoft.Toolkit.Extensions.StringExtensions.IsCharacterString str" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static bool IsCharacterString(System::String ^ str);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static bool IsCharacterString(Platform::String ^ str);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Toolkit</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -98,12 +123,12 @@
         <Parameter Name="str" Type="System.String" RefType="this" />
       </Parameters>
       <Docs>
-        <param name="str">string value.</param>
+        <param name="str">The string to test.</param>
         <summary>
-            Returns whether said string contains only letters or not.
+            Determines whether a string contains only letters.
             </summary>
         <returns>
-          <c>true</c> for valid Character.<c>false</c> otherwise</returns>
+          <c>true</c> if the string contains only letters; otherwise, <c>false</c>.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -113,12 +138,10 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Toolkit.Extensions.StringExtensions.IsDecimal(System.String)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function IsDecimal (str As String) As Boolean" />
       <MemberSignature Language="F#" Value="static member IsDecimal : string -&gt; bool" Usage="Microsoft.Toolkit.Extensions.StringExtensions.IsDecimal str" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static bool IsDecimal(System::String ^ str);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static bool IsDecimal(Platform::String ^ str);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Toolkit</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -127,12 +150,12 @@
         <Parameter Name="str" Type="System.String" RefType="this" />
       </Parameters>
       <Docs>
-        <param name="str">To be added.</param>
+        <param name="str">The string to test.</param>
         <summary>
-            Returns whether said string is a valid decimal number or not.
+            Determines whether a string is a valid decimal number.
             </summary>
         <returns>
-          <c>true</c> for valid decimal number.<c>false</c> otherwise</returns>
+          <c>true</c> for a valid decimal number; otherwise, <c>false</c>.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -142,12 +165,10 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Toolkit.Extensions.StringExtensions.IsEmail(System.String)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function IsEmail (str As String) As Boolean" />
       <MemberSignature Language="F#" Value="static member IsEmail : string -&gt; bool" Usage="Microsoft.Toolkit.Extensions.StringExtensions.IsEmail str" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static bool IsEmail(System::String ^ str);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static bool IsEmail(Platform::String ^ str);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Toolkit</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -156,13 +177,12 @@
         <Parameter Name="str" Type="System.String" RefType="this" />
       </Parameters>
       <Docs>
-        <param name="str">string value.</param>
+        <param name="str">The string to test.</param>
         <summary>
-            Returns whether said string is a valid email or not.
-            Uses general Email Regex (RFC 5322 Official Standard) from emailregex.com
+            Determines whether a string is a valid email address.
             </summary>
         <returns>
-          <c>true</c> for valid email.<c>false</c> otherwise</returns>
+          <c>true</c> for a valid email address; otherwise, <c>false</c>.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -172,12 +192,10 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Toolkit.Extensions.StringExtensions.IsNumeric(System.String)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function IsNumeric (str As String) As Boolean" />
       <MemberSignature Language="F#" Value="static member IsNumeric : string -&gt; bool" Usage="Microsoft.Toolkit.Extensions.StringExtensions.IsNumeric str" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static bool IsNumeric(System::String ^ str);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static bool IsNumeric(Platform::String ^ str);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Toolkit</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -186,12 +204,12 @@
         <Parameter Name="str" Type="System.String" RefType="this" />
       </Parameters>
       <Docs>
-        <param name="str">string value.</param>
+        <param name="str">The string to test.</param>
         <summary>
-            Returns whether said string is a valid integer or not.
+            Determines whether a string is a valid integer.
             </summary>
         <returns>
-          <c>true</c> for valid integer.<c>false</c> otherwise</returns>
+          <c>true</c> for a valid integer; otherwise, <c>false</c>.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -201,12 +219,10 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Toolkit.Extensions.StringExtensions.IsPhoneNumber(System.String)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function IsPhoneNumber (str As String) As Boolean" />
       <MemberSignature Language="F#" Value="static member IsPhoneNumber : string -&gt; bool" Usage="Microsoft.Toolkit.Extensions.StringExtensions.IsPhoneNumber str" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static bool IsPhoneNumber(System::String ^ str);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static bool IsPhoneNumber(Platform::String ^ str);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Toolkit</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -215,12 +231,12 @@
         <Parameter Name="str" Type="System.String" RefType="this" />
       </Parameters>
       <Docs>
-        <param name="str">string value.</param>
+        <param name="str">The string to test.</param>
         <summary>
-            Returns whether said string is a valid phonenumber or not.
+            Determines whether a string is a valid phone number.
             </summary>
         <returns>
-          <c>true</c> for valid phonenumber.<c>false</c> otherwise</returns>
+          <c>true</c> for a valid phone number; otherwise, <c>false</c>.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -230,12 +246,10 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Toolkit.Extensions.StringExtensions.ToSafeString(System.Object)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ToSafeString (value As Object) As String" />
       <MemberSignature Language="F#" Value="static member ToSafeString : obj -&gt; string" Usage="Microsoft.Toolkit.Extensions.StringExtensions.ToSafeString value" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::String ^ ToSafeString(System::Object ^ value);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Platform::String ^ ToSafeString(Platform::Object ^ value);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Toolkit</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -244,11 +258,11 @@
         <Parameter Name="value" Type="System.Object" RefType="this" />
       </Parameters>
       <Docs>
-        <param name="value">Object value.</param>
+        <param name="value">The object to convert.</param>
         <summary>
-            Converts object into string.
+            Returns a string representation of an object.
             </summary>
-        <returns>Returns string value.</returns>
+        <returns>String representation of the object.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -258,12 +272,10 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Toolkit.Extensions.StringExtensions.Truncate(System.String,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Truncate (value As String, length As Integer) As String" />
       <MemberSignature Language="F#" Value="static member Truncate : string * int -&gt; string" Usage="Microsoft.Toolkit.Extensions.StringExtensions.Truncate (value, length)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::String ^ Truncate(System::String ^ value, int length);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Platform::String ^ Truncate(Platform::String ^ value, int length);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Toolkit</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -276,7 +288,7 @@
         <param name="value">The string to be truncated.</param>
         <param name="length">The maximum length.</param>
         <summary>
-            Trims and Truncates the specified string to the specified length.
+            Truncates a string to the specified length.
             </summary>
         <returns>Truncated string.</returns>
         <remarks>To be added.</remarks>
@@ -288,12 +300,10 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Toolkit.Extensions.StringExtensions.Truncate(System.String,System.Int32,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Truncate (value As String, length As Integer, ellipsis As Boolean) As String" />
       <MemberSignature Language="F#" Value="static member Truncate : string * int * bool -&gt; string" Usage="Microsoft.Toolkit.Extensions.StringExtensions.Truncate (value, length, ellipsis)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::String ^ Truncate(System::String ^ value, int length, bool ellipsis);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Platform::String ^ Truncate(Platform::String ^ value, int length, bool ellipsis);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Toolkit</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -306,9 +316,10 @@
       <Docs>
         <param name="value">The string to be truncated.</param>
         <param name="length">The maximum length.</param>
-        <param name="ellipsis">if set to <c>true</c> add a text ellipsis.</param>
+        <param name="ellipsis">
+          <c>true</c> to add ellipsis to the truncated text; otherwise, <c>false</c>.</param>
         <summary>
-            Trims and Truncates the specified string to the specified length.
+            Truncates a string to the specified length.
             </summary>
         <returns>Truncated string.</returns>
         <remarks>To be added.</remarks>
